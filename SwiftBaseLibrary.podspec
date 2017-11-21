@@ -8,8 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftBaseLibrary'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'Librerías base para la construcción de aplicaciones realizadas en lenguaje Swift que ayudan a un desarrollo rápido y eficaz'
+
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -30,7 +31,7 @@ TODO: Librerías base para la construcción de aplicaciones realizadas en lengua
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SwiftBaseLibrary/Classes/**/*'
+  s.source_files = 'Pod/Classes/**/*'
   
   # s.resource_bundles = {
   #   'SwiftBaseLibrary' => ['SwiftBaseLibrary/Assets/*.png']

@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		08BE1BA610836A80784E9C4B /* Pods-SwiftBaseLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBaseLibrary_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBaseLibrary_Example/Pods-SwiftBaseLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		359902156354F7FCA153AB58 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		359902156354F7FCA153AB58 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		46E24B468D00F7C77120E76B /* Pods-SwiftBaseLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBaseLibrary_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBaseLibrary_Tests/Pods-SwiftBaseLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		51E2268622B319847621B5F6 /* Pods-SwiftBaseLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBaseLibrary_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBaseLibrary_Tests/Pods-SwiftBaseLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwiftBaseLibrary_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBaseLibrary_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,8 +43,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		64550DF926F0DA1CF0227A9D /* Pods_SwiftBaseLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBaseLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F82AC7F12BDA0A045FBC1D1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		A689B5CE9FDD8F2884AE61A5 /* SwiftBaseLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SwiftBaseLibrary.podspec; path = ../SwiftBaseLibrary.podspec; sourceTree = "<group>"; };
+		7F82AC7F12BDA0A045FBC1D1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A689B5CE9FDD8F2884AE61A5 /* SwiftBaseLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftBaseLibrary.podspec; path = ../SwiftBaseLibrary.podspec; sourceTree = "<group>"; };
 		B19BA61011CD9C9475D760CE /* Pods_SwiftBaseLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBaseLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0779DECC35C40B5F2114ECF /* Pods-SwiftBaseLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBaseLibrary_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBaseLibrary_Example/Pods-SwiftBaseLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,6 +215,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = EUMNK45STA;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -517,6 +518,7 @@
 			baseConfigurationReference = 08BE1BA610836A80784E9C4B /* Pods-SwiftBaseLibrary_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EUMNK45STA;
 				INFOPLIST_FILE = SwiftBaseLibrary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -532,6 +534,7 @@
 			baseConfigurationReference = C0779DECC35C40B5F2114ECF /* Pods-SwiftBaseLibrary_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EUMNK45STA;
 				INFOPLIST_FILE = SwiftBaseLibrary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
