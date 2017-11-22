@@ -13,6 +13,9 @@ class ViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var mLastNameTextField : UITextView = UITextView()
+        mLastNameTextField.text?.trim()
     }
 
 }

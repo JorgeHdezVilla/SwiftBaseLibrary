@@ -10,7 +10,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftBaseLibrary'
-  s.version          = '1.0.6'
+  s.version          = '1.0.7'
   s.summary          = 'Librerías base para la construcción de aplicaciones realizadas en lenguaje Swift que ayudan a un desarrollo rápido y eficaz'
 
 

@@ -10,28 +10,28 @@ import UIKit
 
 open class BasePresenter: NSObject {
     
-    var mViewController : BaseViewController
+    public var mViewController : BaseViewController
     
-    init(viewController : BaseViewController){
+    public init(viewController : BaseViewController){
         self.mViewController = viewController
     }
     
-    func viewDidLoad(){
+    open func viewDidLoad(){
     }
     
-    func viewWillAppear(){
+    open func viewWillAppear(){
     }
     
-    func viewDidAppear(){
+    open func viewDidAppear(){
     }
     
-    func viewWillDisappear(){
+    open func viewWillDisappear(){
     }
     
-    func viewDidDisappear(){
+    open func viewDidDisappear(){
     }
     
-    func viewDidUnload(){
+    open func viewDidUnload(){
     }
     
 }
