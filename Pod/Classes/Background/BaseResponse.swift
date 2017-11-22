@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-public class BaseResponse: NSObject, Mappable {
+open class BaseResponse: NSObject, Mappable {
     
     required convenience public init?(map: Map) {
         self.init()

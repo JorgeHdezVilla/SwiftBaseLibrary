@@ -15,7 +15,7 @@ public protocol CheckGroupDelegate: NSObjectProtocol {
 }
 
 
-public class CheckBoxGroup: NSObject {
+open class CheckBoxGroup: NSObject {
     
     var delegate : CheckGroupDelegate?
     var checksBox : [CheckBoxButton]!
@@ -33,7 +33,7 @@ public class CheckBoxGroup: NSObject {
         }
     }
     
-    func handleTap(_ sender: CheckBoxButton? = nil) {
+    @objc func handleTap(_ sender: CheckBoxButton? = nil) {
         self.checkBoxSelected = sender
         self.setCheck(checkBox: sender!)
         if delegate != nil{

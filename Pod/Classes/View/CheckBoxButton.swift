@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CheckBoxButton: UIButton {
+open class CheckBoxButton: UIButton {
     
     @IBInspectable dynamic var value : String = ""
     
@@ -20,11 +20,11 @@ public class CheckBoxButton: UIButton {
         self.layer.borderColor = UIColor.gray.cgColor
     }
     
-    func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         isChecked = !isChecked
     }
     
-    dynamic var isChecked:Bool = false{
+    @objc dynamic var isChecked:Bool = false{
         didSet{
             if isChecked {
                 self.setImage(UIImage(named: "ic_checked"), for: UIControlState())

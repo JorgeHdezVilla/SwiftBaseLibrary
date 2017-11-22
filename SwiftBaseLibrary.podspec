@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftBaseLibrary'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'Librerías base para la construcción de aplicaciones realizadas en lenguaje Swift que ayudan a un desarrollo rápido y eficaz'
 
 
@@ -29,7 +29,7 @@ TODO: Librerías base para la construcción de aplicaciones realizadas en lengua
   s.source           = { :git => 'https://github.com/JorgeHdezVilla/SwiftBaseLibrary.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'Pod/Classes/**/*'
   
@@ -42,9 +42,8 @@ TODO: Librerías base para la construcción de aplicaciones realizadas en lengua
   # s.dependency 'AFNetworking', '~> 2.3'
 
   s.dependency 'PKHUD', '~> 4.0'
-  s.dependency 'Alamofire-Synchronous', '~> 4.0'
-  s.dependency 'AlamofireObjectMapper', '~> 4.0'
-  s.dependency 'Alamofire', '~> 4.0.0-beta.1'
+  s.dependency 'AlamofireObjectMapper', '~> 5.0'
+  s.dependency 'Alamofire', '~> 4.5'
   s.dependency 'ActionSheetPicker-3.0'
   s.dependency 'RealmSwift'
 

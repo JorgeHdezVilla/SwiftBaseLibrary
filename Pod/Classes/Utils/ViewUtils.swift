@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum ViewVisibilityEnum{
+public enum ViewVisibilityEnum{
     case GONE
     case NOT_GONE
     case VISIBLE

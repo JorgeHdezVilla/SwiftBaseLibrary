@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class BasePresenter: NSObject {
+open class BasePresenter: NSObject {
     
     var mViewController : BaseViewController
     

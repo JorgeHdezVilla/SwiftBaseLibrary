@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, BaseTableDelegate {
+open class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, BaseTableDelegate {
     
     var items : [T] = []
     var itemSelected : T?
@@ -51,7 +51,7 @@ public class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITabl
         _ = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(self.updateHeight), userInfo: nil, repeats: false)
     }
     
-    func updateHeight() {
+    @objc func updateHeight() {
         for constraint in (tableView?.constraints)! {
             if (constraint.firstAttribute == NSLayoutAttribute.height && constraint.secondAttribute == NSLayoutAttribute.notAnAttribute) {
                 constraint.constant = (tableView?.contentSize.height)!
@@ -66,15 +66,15 @@ public class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITabl
         self.executeAction = action
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.row]
         var cell : BaseTableViewCell? = getItemTypeCell(item : item)
         if cell == nil {
@@ -108,7 +108,7 @@ public class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITabl
         return (tableView!.dequeueReusableCell(withIdentifier: identifier) as? BaseTableViewCell)!
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
     }
     

@@ -8,20 +8,20 @@
 
 import UIKit
 
-public class BaseTabBarViewController: UITabBarController {
+open class BaseTabBarViewController: UITabBarController {
 
-    dynamic var presenter : BasePresenter?
+    @objc dynamic var presenter : BasePresenter?
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
     

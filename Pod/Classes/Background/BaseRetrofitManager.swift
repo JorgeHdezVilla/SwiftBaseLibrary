@@ -11,6 +11,12 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
+let CUSTOM_HEADERS = [
+    "Content-Type": "application/json",
+    "Authorization" : "Basic ZmZtYXBwOjRnZW5kNG1pM250bw==",
+    "Accept" : "application/json"
+]
+
 public class BaseRetrofitManager<Res : BaseResponse>: NSObject {
     
     var requestUrl : String
@@ -62,7 +68,7 @@ public class BaseRetrofitManager<Res : BaseResponse>: NSObject {
             
             let params  = Mapper().toJSON(requestModel)
             
-            request = Manager.request(self.requestUrl, method: HTTPMethod.post, parameters: params, encoding: JSONEncoding.default, headers: ApiDefinition.CUSTOM_HEADERS).responseObject {
+            request = Manager.request(self.requestUrl, method: HTTPMethod.post, parameters: params, encoding: JSONEncoding.default, headers: CUSTOM_HEADERS).responseObject {
                 (response: DataResponse<Res>) in
                 switch response.result {
                 case .success:
@@ -90,7 +96,7 @@ public class BaseRetrofitManager<Res : BaseResponse>: NSObject {
             
             let params  = Mapper().toJSON(requestModel)
             print(params)
-            request = Manager.request(self.requestUrl, method: HTTPMethod.post, parameters: params, encoding: JSONEncoding.default, headers: ApiDefinition.CUSTOM_HEADERS).responseObject {
+            request = Manager.request(self.requestUrl, method: HTTPMethod.post, parameters: params, encoding: JSONEncoding.default, headers: CUSTOM_HEADERS).responseObject {
                 (response: DataResponse<Res>) in
                 switch response.result {
                 case .success:

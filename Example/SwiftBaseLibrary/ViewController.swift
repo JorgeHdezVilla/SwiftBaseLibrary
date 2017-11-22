@@ -11,7 +11,7 @@ import SwiftBaseLibrary
 
 class ViewController: BaseViewController {
 
-    func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
     }
 

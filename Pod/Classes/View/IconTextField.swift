@@ -9,7 +9,7 @@
 import UIKit
 import ActionSheetPicker_3_0
 
-@IBDesignable public class IconTextField: UITextField, UITextFieldDelegate {
+@IBDesignable open class IconTextField: UITextField, UITextFieldDelegate {
     
 //    @IBInspectable var iconLeft : UIImage? = nil
     @IBInspectable var maxCharacters : Int = 50
@@ -18,14 +18,14 @@ import ActionSheetPicker_3_0
     var indexElementPicker : Int = 0
     var isEnablePicker : Bool = true
     
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         self.delegate = self
         self.tintColor = UIColor.white
         self.textColor = UIColor.white
     }
     
-    override func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
 //        if iconLeft != nil{
 //            let image : UIImageView = UIImageView(image: iconLeft)
 //
@@ -46,7 +46,7 @@ import ActionSheetPicker_3_0
 //        self.layer.masksToBounds = true
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
         let newLength = text.characters.count + string.characters.count - range.length
         return newLength <= maxCharacters // Bool
@@ -72,15 +72,15 @@ import ActionSheetPicker_3_0
         //_ = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
     }
     
-    func tapBlurButton(_ sender: UITapGestureRecognizer) {
+    @objc func tapBlurButton(_ sender: UITapGestureRecognizer) {
         showActionPicker()
     }
     
-    func tapDateBlurButton(_ sender: UITapGestureRecognizer) {
+    @objc func tapDateBlurButton(_ sender: UITapGestureRecognizer) {
         showActionDatePicker(date: self.text)
     }
     
-    func tapCreditCardDateBlurButton(_ sender: UITapGestureRecognizer) {
+    @objc func tapCreditCardDateBlurButton(_ sender: UITapGestureRecognizer) {
         showActionCreditCardDatePicker(date: self.text)
     }
     

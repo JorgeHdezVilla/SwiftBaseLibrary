@@ -8,6 +8,6 @@
 
 import UIKit
 
-public class BaseMultiCellDataSource<T: NSObject> : BaseDataSource<T, BaseTableViewCell> {
+open class BaseMultiCellDataSource<T: NSObject> : BaseDataSource<T, BaseTableViewCell> {
 
 }

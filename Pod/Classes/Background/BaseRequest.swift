@@ -15,7 +15,7 @@ public class BaseRequest: NSObject, Mappable {
         self.init()
     }
     
-    internal func mapping(map : Map){
+    public func mapping(map : Map){
         
     }
     

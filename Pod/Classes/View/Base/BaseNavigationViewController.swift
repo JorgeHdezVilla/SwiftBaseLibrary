@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class BaseNavigationViewController: UINavigationController {
+open class BaseNavigationViewController: UINavigationController {
     
     var resultDelegate : ControllerResultDelegate?
     var requestValue : String = ""
@@ -16,22 +16,22 @@ public class BaseNavigationViewController: UINavigationController {
     var resultValue : ViewControllerResult = ViewControllerResult.RESULT_ERROR
     var data : [String : AnyObject] = [:]
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBar.isTranslucent = false
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override open func viewDidDisappear(_ animated: Bool) {
         if resultDelegate != nil {
             resultDelegate?.viewControllerForResult(keyRequest: requestValue, result: resultValue, data: data)
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
     

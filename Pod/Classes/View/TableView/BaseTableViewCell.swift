@@ -8,19 +8,19 @@
 
 import UIKit
 
-public class BaseTableViewCell: UITableViewCell {
+open class BaseTableViewCell: UITableViewCell {
     
     var delegate : NSObjectProtocol!
     var itemObject : NSObject?
     var delegateCell: BaseTableDelegate?
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapEdit(_:)))
         addGestureRecognizer(tapGesture)
     }
     
-    func tapEdit(_ sender: UITapGestureRecognizer) {
+    @objc func tapEdit(_ sender: UITapGestureRecognizer) {
         delegateCell?.baseTableDelegate(sender: sender)
     }
     

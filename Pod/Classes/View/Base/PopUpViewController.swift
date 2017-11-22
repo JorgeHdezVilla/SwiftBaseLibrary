@@ -8,11 +8,11 @@
 
 import UIKit
 
-public class PopUpViewController: BaseViewController, UIGestureRecognizerDelegate {
+open class PopUpViewController: BaseViewController, UIGestureRecognizerDelegate {
     
     var bottomLeftViewBottomConstraint : NSLayoutConstraint!
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 180.0/256.0)
         view.isOpaque = false
@@ -31,7 +31,7 @@ public class PopUpViewController: BaseViewController, UIGestureRecognizerDelegat
         
     }
     
-    func keyboardWillShow(_ sender: Notification) {
+    @objc func keyboardWillShow(_ sender: Notification) {
         if (sender as NSNotification).userInfo != nil {
             
             let userInfo:NSDictionary = sender.userInfo! as NSDictionary
@@ -45,7 +45,7 @@ public class PopUpViewController: BaseViewController, UIGestureRecognizerDelegat
     }
     
     
-    func keyboardWillHide(_ sender: Notification) {
+    @objc func keyboardWillHide(_ sender: Notification) {
         bottomLeftViewBottomConstraint.constant = 0
         UIView.animate(withDuration: 0.25, animations: { () -> Void in
             self.view.layoutIfNeeded()
@@ -53,7 +53,7 @@ public class PopUpViewController: BaseViewController, UIGestureRecognizerDelegat
     }
     
 
-    override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
