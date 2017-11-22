@@ -9,14 +9,14 @@
 import UIKit
 
 public class RegexEnum{
-    static let NOT_EMPTY = 1
-    static let EMAIL = 2
-    static let CP = 3
-    static let LENGHT = 4
-    static let EQUAL_TO = 5
-    static let NOT_EQUAL_TO = 6
-    static let RFC = 7 //
-    static let DATE_YEAR_LESS_TO = 8
+    public static let NOT_EMPTY = 1
+    public static let EMAIL = 2
+    public static let CP = 3
+    public static let LENGHT = 4
+    public static let EQUAL_TO = 5
+    public static let NOT_EQUAL_TO = 6
+    public static let RFC = 7 //
+    public static let DATE_YEAR_LESS_TO = 8
 }
 
 public class TextFieldValidator: Validator {
@@ -33,7 +33,7 @@ public class TextFieldValidator: Validator {
     let width = CGFloat(1.0)
     
     
-    init(textField : UITextField, regex : Int, messageError : String){
+    public init(textField : UITextField, regex : Int, messageError : String){
         super.init()
         self.textField = textField
         self.regex = regex
@@ -41,7 +41,7 @@ public class TextFieldValidator: Validator {
         self.view = self.textField
     }
     
-    init(textField : UITextField, regex : Int){
+    public init(textField : UITextField, regex : Int){
         super.init()
         self.textField = textField
         self.regex = regex
@@ -55,7 +55,7 @@ public class TextFieldValidator: Validator {
         textField.layer.masksToBounds = true
     }
     
-    init (textField: UITextField, regex : Int, year : Int, messageError : String){
+    public init (textField: UITextField, regex : Int, year : Int, messageError : String){
         super.init()
         self.textField = textField
         self.regex = regex
@@ -64,7 +64,7 @@ public class TextFieldValidator: Validator {
         self.view = self.textField
     }
     
-    init(textField : UITextField, minCharacters : Int, maxCharacters : Int, messageError : String){
+    public init(textField : UITextField, minCharacters : Int, maxCharacters : Int, messageError : String){
         super.init()
         self.textField = textField
         self.messageError = messageError
@@ -73,7 +73,7 @@ public class TextFieldValidator: Validator {
         self.maxCharacters = maxCharacters
     }
     
-    init(textField : UITextField, regex : Int, minCharacters : Int, maxCharacters : Int, messageError : String){
+    public init(textField : UITextField, regex : Int, minCharacters : Int, maxCharacters : Int, messageError : String){
         super.init()
         self.textField = textField
         self.messageError = messageError
@@ -83,7 +83,7 @@ public class TextFieldValidator: Validator {
         self.maxCharacters = maxCharacters
     }
     
-    init(textField : UITextField, regex : Int, valueText : String){
+    public init(textField : UITextField, regex : Int, valueText : String){
         super.init()
         self.textField = textField
         self.regex = regex

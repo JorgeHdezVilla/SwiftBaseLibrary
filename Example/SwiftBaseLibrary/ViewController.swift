@@ -14,12 +14,19 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var mLastNameTextField : UITextView = UITextView()
+        var mLastNameTextField : UITextField = UITextField()
         mLastNameTextField.text?.trim()
         
         
         var mFormValidator : FormValidator!
         mFormValidator.isValid()
+        
+        mFormValidator = FormValidator(showAllErrors: true)
+        mFormValidator.addValidators(validators:
+            TextFieldValidator(textField: mLastNameTextField, regex: RegexEnum.NOT_EMPTY),
+                                     TextFieldValidator(textField: mLastNameTextField, regex: RegexEnum.NOT_EMPTY),
+                                     TextFieldValidator(textField: mLastNameTextField, regex: RegexEnum.NOT_EMPTY)
+        )
     }
 
 }

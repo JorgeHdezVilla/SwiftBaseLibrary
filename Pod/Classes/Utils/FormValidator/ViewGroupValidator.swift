@@ -15,7 +15,7 @@ public class ViewGroupValidator: Validator {
     var showAllErrors : Bool = true
     var valueActivator : Bool = true
     
-    init(validator : Validator, validators : [Validator], showAllErrors : Bool, valueActivator : Bool){
+    public init(validator : Validator, validators : [Validator], showAllErrors : Bool, valueActivator : Bool){
         self.validator = validator
         self.validators = validators
         self.showAllErrors = showAllErrors

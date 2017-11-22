@@ -14,7 +14,7 @@ open class FormValidator: NSObject {
     var showAllErrors : Bool?
     var showAnimationError : Bool = true
     
-    init(showAllErrors : Bool, showAnimationError : Bool = true) {
+    public init(showAllErrors : Bool, showAnimationError : Bool = true) {
         self.validators = NSMutableArray()
         self.showAllErrors = showAllErrors
         self.showAnimationError = showAnimationError

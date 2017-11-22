@@ -14,7 +14,7 @@ public class SegmentedControlValidator: Validator {
     var mSegmentedControl : UISegmentedControl!
     var mPositionValue : Int = 0
     
-    init(segmentedControl : UISegmentedControl, positionValue : Int, validators : Validator...){
+    public init(segmentedControl : UISegmentedControl, positionValue : Int, validators : Validator...){
         super.init()
         self.mSegmentedControl = segmentedControl
         mPositionValue = positionValue
