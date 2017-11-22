@@ -17,11 +17,11 @@ public protocol CheckGroupDelegate: NSObjectProtocol {
 
 open class CheckBoxGroup: NSObject {
     
-    var delegate : CheckGroupDelegate?
-    var checksBox : [CheckBoxButton]!
-    var checkBoxSelected : CheckBoxButton?
+    public var delegate : CheckGroupDelegate?
+    public var checksBox : [CheckBoxButton]!
+    public var checkBoxSelected : CheckBoxButton?
     
-    init (checksBox : [CheckBoxButton], delegate : CheckGroupDelegate? = nil) {
+    public init (checksBox : [CheckBoxButton], delegate : CheckGroupDelegate? = nil) {
         super.init()
         if delegate != nil {
             self.delegate = delegate
@@ -41,7 +41,7 @@ open class CheckBoxGroup: NSObject {
         }
     }
     
-    func setCheck(checkBox:CheckBoxButton){
+    public func setCheck(checkBox:CheckBoxButton){
         for view in checksBox as [CheckBoxButton]{
             if view != checkBox{
                 view.isChecked = false
@@ -50,14 +50,14 @@ open class CheckBoxGroup: NSObject {
         checkBox.isChecked = true
     }
     
-    func getValue() -> String? {
+    public func getValue() -> String? {
         if checkBoxSelected != nil {
             return checkBoxSelected!.value
         }
         return ""
     }
     
-    func setValue(value : String){
+    public func setValue(value : String){
         for view in checksBox as [CheckBoxButton]{
             if view.value == value {
                 self.setCheck(checkBox: view)

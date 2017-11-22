@@ -99,7 +99,7 @@ open class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITableV
         return cell!
     }
     
-    public func getItemTypeCell(item : NSObject) -> BaseTableViewCell? {
+    open func getItemTypeCell(item : NSObject) -> BaseTableViewCell? {
         return nil
     }
     
