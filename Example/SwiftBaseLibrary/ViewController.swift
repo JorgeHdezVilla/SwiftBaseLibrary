@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 import SwiftBaseLibrary
 
 class ViewController: BaseViewController {
@@ -27,7 +28,36 @@ class ViewController: BaseViewController {
                                      TextFieldValidator(textField: mLastNameTextField, regex: RegexEnum.NOT_EMPTY),
                                      TextFieldValidator(textField: mLastNameTextField, regex: RegexEnum.NOT_EMPTY)
         )
+
     }
+    
+    override func getPresenter() -> BasePresenter? {
+        return nil
+    }
+    
+    public class BaseEstrategiaResponse: BaseResponse {
+        
+        
+        var result : String = ""
+        var resultDescription : String = ""
+        var idResult : String = ""
+        
+        required convenience public init?(map: Map) {
+            self.init()
+        }
+        
+        public override func mapping(map: Map) {
+            self.result     <- map["Result"]
+            if self.result == "" {
+                self.result <- map["result"]
+            }
+            self.resultDescription <- map["ResultDescription"]
+            
+            self.idResult <- map["idresult"]
+        }
+        
+    }
+
 
 }
 

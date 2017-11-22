@@ -10,9 +10,25 @@ import UIKit
 import SwiftBaseLibrary
 import ObjectMapper
 
+enum KeysEnum: APIKeys {
+    case EXTRA_WORK_ORDER
+    case EXTRA_TIME_TO_ARRIVE_RESPONSE
+    case EXTRA_ARR_FAMILY
+    case EXTRA_DIRECCION_BEAN
+    case EXTRA_PLAN
+    case EXTRA_CAPTURE_IMAGE
+    case EXTRA_TYPE_PLAN_SELECTED
+}
+
+
+
+
 class RecoveryPasswordPresenter: BasePresenter, AlamofireResponseDelegate {
 
     func recoveryPassword(accountNumber : String){
+        
+        mViewController.extras[KeysEnum.EXTRA_ARR_FAMILY] as! NSObject
+        
         let accountNumberRequest : AccountNumberRequest = AccountNumberRequest(accountNumber: accountNumber)
         RetrofitManager<BaseResponse>.init(requestUrl: ApiDefinition.WS_RECOVERY_PASSWORD, delegate: self).request(requestModel: accountNumberRequest)
     }

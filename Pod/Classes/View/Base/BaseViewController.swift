@@ -55,11 +55,11 @@ open class BaseViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    public func getPresenter() -> BasePresenter? {
+    open func getPresenter() -> BasePresenter? {
         return nil
     }
     
-    public func getPresenters() -> [BasePresenter]? {
+    open func getPresenters() -> [BasePresenter]? {
         return []
     }
     

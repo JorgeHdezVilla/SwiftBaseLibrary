@@ -15,7 +15,7 @@ open class BaseResponse: NSObject, Mappable {
         self.init()
     }
     
-    public func mapping(map: Map) {
+    open func mapping(map: Map) {
     }
 
 }
