@@ -105,7 +105,7 @@ open class BaseViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    open func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return true
     }
     

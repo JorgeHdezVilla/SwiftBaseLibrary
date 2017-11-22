@@ -24,7 +24,7 @@ open class CheckBoxButton: UIButton {
         isChecked = !isChecked
     }
     
-    @objc dynamic var isChecked:Bool = false{
+    @objc public dynamic var isChecked:Bool = false{
         didSet{
             if isChecked {
                 self.setImage(UIImage(named: "ic_checked"), for: UIControlState())
