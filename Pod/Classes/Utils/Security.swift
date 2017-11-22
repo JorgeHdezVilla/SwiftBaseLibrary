@@ -23,7 +23,7 @@ extension NSData {
     }
 }
 
-class Security: NSObject {
+public class Security: NSObject {
     
     class func crypt(text: String) -> String{
         if text != "" {

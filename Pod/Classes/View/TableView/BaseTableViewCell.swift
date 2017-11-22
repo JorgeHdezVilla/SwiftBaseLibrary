@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseTableViewCell: UITableViewCell {
+public class BaseTableViewCell: UITableViewCell {
     
     var delegate : NSObjectProtocol!
     var itemObject : NSObject?

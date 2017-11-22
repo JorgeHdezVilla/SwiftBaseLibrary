@@ -15,9 +15,9 @@ enum ViewVisibilityEnum{
     case INVISIBLE
 }
 
-class ViewUtils: NSObject {
+public class ViewUtils: NSObject {
     
-    class func addSubview(subView:UIView, toView parentView:UIView) {
+    public class func addSubview(subView:UIView, toView parentView:UIView) {
         parentView.addSubview(subView)
         
         var viewBindingsDict = [String: AnyObject]()
@@ -28,7 +28,7 @@ class ViewUtils: NSObject {
                                                                  options: [], metrics: nil, views: viewBindingsDict))
     }
     
-    class func cycleFromViewController(viewController: UIViewController,
+    public class func cycleFromViewController(viewController: UIViewController,
                                        inContainerView containerView: UIView,
                                        fromOldViewController oldViewController: UIViewController,
                                        toViewController newViewController: UIViewController) {
@@ -48,7 +48,7 @@ class ViewUtils: NSObject {
         })
     }
     
-    class func setVisibility(view : UIView, visibility : ViewVisibilityEnum, controller : UIViewController, animated : Bool? = false){
+    public class func setVisibility(view : UIView, visibility : ViewVisibilityEnum, controller : UIViewController, animated : Bool? = false){
         setVisibility(view: view, visibility: visibility)
         if animated! {
             UIView.animate(withDuration: 0.3) {
@@ -59,7 +59,7 @@ class ViewUtils: NSObject {
         }
     }
     
-    class func isGone(view: UIView) -> Bool {
+    public class func isGone(view: UIView) -> Bool {
         for constraint in view.constraints {
             if (constraint.firstAttribute == NSLayoutAttribute.height && constraint.secondAttribute == NSLayoutAttribute.notAnAttribute) {
                 if constraint.constant == 0 {
@@ -70,7 +70,7 @@ class ViewUtils: NSObject {
         return false
     }
     
-    class func setVisibility(view : UIView, visibility : ViewVisibilityEnum, animated : Bool? = false){
+    public class func setVisibility(view : UIView, visibility : ViewVisibilityEnum, animated : Bool? = false){
         view.clipsToBounds = true
         if visibility == ViewVisibilityEnum.INVISIBLE{
             view.isHidden = true

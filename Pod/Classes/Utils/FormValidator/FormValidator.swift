@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormValidator: NSObject {
+public class FormValidator: NSObject {
 
     var validators : NSMutableArray?
     var showAllErrors : Bool?

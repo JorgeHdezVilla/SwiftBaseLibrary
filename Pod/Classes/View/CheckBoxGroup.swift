@@ -15,7 +15,7 @@ public protocol CheckGroupDelegate: NSObjectProtocol {
 }
 
 
-class CheckBoxGroup: NSObject {
+public class CheckBoxGroup: NSObject {
     
     var delegate : CheckGroupDelegate?
     var checksBox : [CheckBoxButton]!

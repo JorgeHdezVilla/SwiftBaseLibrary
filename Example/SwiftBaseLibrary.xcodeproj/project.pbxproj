@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		70F5FB88580F3F0DC40595DB /* Pods_SwiftBaseLibrary_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19BA61011CD9C9475D760CE /* Pods_SwiftBaseLibrary_Tests.framework */; };
+		8FC304061FC509B900296EBB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC304051FC509B900296EBB /* Response.swift */; };
 		D60DC8E9DB49A3BA36E50EFE /* Pods_SwiftBaseLibrary_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64550DF926F0DA1CF0227A9D /* Pods_SwiftBaseLibrary_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		64550DF926F0DA1CF0227A9D /* Pods_SwiftBaseLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBaseLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F82AC7F12BDA0A045FBC1D1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8FC304051FC509B900296EBB /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		A689B5CE9FDD8F2884AE61A5 /* SwiftBaseLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftBaseLibrary.podspec; path = ../SwiftBaseLibrary.podspec; sourceTree = "<group>"; };
 		B19BA61011CD9C9475D760CE /* Pods_SwiftBaseLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBaseLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0779DECC35C40B5F2114ECF /* Pods-SwiftBaseLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBaseLibrary_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBaseLibrary_Example/Pods-SwiftBaseLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				8FC304051FC509B900296EBB /* Response.swift */,
 			);
 			name = "Example for SwiftBaseLibrary";
 			path = SwiftBaseLibrary;
@@ -305,10 +308,26 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftBaseLibrary_Example/Pods-SwiftBaseLibrary_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-Synchronous/Alamofire_Synchronous.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftBaseLibrary/SwiftBaseLibrary.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_Synchronous.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftBaseLibrary.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				8FC304061FC509B900296EBB /* Response.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

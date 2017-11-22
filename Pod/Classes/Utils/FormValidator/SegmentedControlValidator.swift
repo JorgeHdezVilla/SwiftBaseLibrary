@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SegmentedControlValidator: Validator {
+public class SegmentedControlValidator: Validator {
 
     var mValidators : [Validator] = []
     var mSegmentedControl : UISegmentedControl!

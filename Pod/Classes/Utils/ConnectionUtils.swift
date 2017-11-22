@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import SystemConfiguration
 
-class ConnectionUtils {
+public class ConnectionUtils {
     
     class func isConnectedToNetwork() -> Bool {
         var zeroAddress = sockaddr_in()

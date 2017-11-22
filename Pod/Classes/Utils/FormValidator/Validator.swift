@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Validator: NSObject {
+public class Validator: NSObject {
     
     dynamic var view : UIView!
 

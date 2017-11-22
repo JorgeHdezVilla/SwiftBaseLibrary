@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegexEnum{
+public class RegexEnum{
     static let NOT_EMPTY = 1
     static let EMAIL = 2
     static let CP = 3
@@ -19,7 +19,7 @@ class RegexEnum{
     static let DATE_YEAR_LESS_TO = 8
 }
 
-class TextFieldValidator: Validator {
+public class TextFieldValidator: Validator {
 
     var textField : UITextField!
     var regex : Int?

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewGroupValidator: Validator {
+public class ViewGroupValidator: Validator {
 
     var validator : Validator!
     var validators : [Validator] = []

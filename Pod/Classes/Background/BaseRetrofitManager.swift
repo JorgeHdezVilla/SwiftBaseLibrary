@@ -11,7 +11,7 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-class BaseRetrofitManager<Res : BaseResponse>: NSObject {
+public class BaseRetrofitManager<Res : BaseResponse>: NSObject {
     
     var requestUrl : String
     var delegate : AlamofireResponseDelegate

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseTabBarViewController: UITabBarController {
+public class BaseTabBarViewController: UITabBarController {
 
     dynamic var presenter : BasePresenter?
     

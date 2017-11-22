@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, BaseTableDelegate {
+public class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, BaseTableDelegate {
     
     var items : [T] = []
     var itemSelected : T?

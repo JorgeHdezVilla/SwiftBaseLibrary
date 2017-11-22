@@ -9,7 +9,7 @@
 import UIKit
 import PKHUD
 
-class AlertDialog {
+public class AlertDialog {
     
     static var overlay : UIView?
     static var viewController : UIViewController?

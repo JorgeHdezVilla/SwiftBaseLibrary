@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseNavigationViewController: UINavigationController {
+public class BaseNavigationViewController: UINavigationController {
     
     var resultDelegate : ControllerResultDelegate?
     var requestValue : String = ""

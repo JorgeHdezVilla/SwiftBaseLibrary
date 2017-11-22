@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PopUpViewController: BaseViewController, UIGestureRecognizerDelegate {
+public class PopUpViewController: BaseViewController, UIGestureRecognizerDelegate {
     
     var bottomLeftViewBottomConstraint : NSLayoutConstraint!
     

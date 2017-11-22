@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DateUtils: NSObject {
+public class DateUtils: NSObject {
     
     static var dateFormat : String = "d/M/yyyy"
 

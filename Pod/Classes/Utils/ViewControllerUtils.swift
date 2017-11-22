@@ -10,22 +10,22 @@ import UIKit
 
 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
-class ViewControllerUtils {
+public class ViewControllerUtils {
     
-    class func createNavigationController(viewController : BaseViewController) -> BaseNavigationViewController {
+    public class func createNavigationController(viewController : BaseViewController) -> BaseNavigationViewController {
         let navigationController = BaseNavigationViewController()
         navigationController.viewControllers = [viewController]
         return navigationController
     }
     
-    class func viewController(viewController: UIViewController.Type) -> UIViewController {
+    public class func viewController(viewController: UIViewController.Type) -> UIViewController {
         let nameController : NSString = NSStringFromClass(viewController.classForCoder()) as NSString
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: nameController.components(separatedBy: ".").last!)
         return vc
     }
     
-    class func presentViewController(from: UIViewController, to: BaseViewController.Type, extras: [String : AnyObject]? = nil){
+    public class func presentViewController(from: UIViewController, to: BaseViewController.Type, extras: [String : AnyObject]? = nil){
         let nameController : NSString = NSStringFromClass(to.classForCoder()) as NSString
         let vc : BaseViewController = storyboard.instantiateViewController(withIdentifier: nameController.components(separatedBy: ".").last!) as! BaseViewController
         if extras != nil {
@@ -34,13 +34,13 @@ class ViewControllerUtils {
         from.present(vc, animated: true, completion: nil)
     }
     
-    class func presentViewController(from: UIViewController, to: BaseViewController.Type, completion: @escaping (() -> Void)){
+    public class func presentViewController(from: UIViewController, to: BaseViewController.Type, completion: @escaping (() -> Void)){
         let nameController : NSString = NSStringFromClass(to.classForCoder()) as NSString
         let vc : BaseViewController = storyboard.instantiateViewController(withIdentifier: nameController.components(separatedBy: ".").last!) as! BaseViewController
         from.present(vc, animated: true, completion: completion)
     }
     
-    class func presentViewControllerWithResult(from: UIViewController, to: BaseViewController.Type, request: String, extras: [String : AnyObject]? = nil){
+    public class func presentViewControllerWithResult(from: UIViewController, to: BaseViewController.Type, request: String, extras: [String : AnyObject]? = nil){
         let nameController : NSString = NSStringFromClass(to.classForCoder()) as NSString
         let vc : BaseViewController = storyboard.instantiateViewController(withIdentifier: nameController.components(separatedBy: ".").last!) as! BaseViewController
         if extras != nil {
@@ -51,7 +51,7 @@ class ViewControllerUtils {
         from.present(vc, animated: true, completion: nil)
     }
     
-    class func pushViewController(from: UIViewController, to: BaseViewController.Type, extras: [String : AnyObject]? = nil){
+    public class func pushViewController(from: UIViewController, to: BaseViewController.Type, extras: [String : AnyObject]? = nil){
         let nameController : NSString = NSStringFromClass(to.classForCoder()) as NSString
         let vc : BaseViewController = storyboard.instantiateViewController(withIdentifier: nameController.components(separatedBy: ".").last!) as! BaseViewController
         if extras != nil {
@@ -60,7 +60,7 @@ class ViewControllerUtils {
         from.navigationController?.pushViewController(vc, animated: true)
     }
     
-    class func pushViewControllerWithResult(from: UIViewController, to: BaseViewController.Type, request: String, extras: [String : AnyObject]? = nil){
+    public class func pushViewControllerWithResult(from: UIViewController, to: BaseViewController.Type, request: String, extras: [String : AnyObject]? = nil){
         let nameController : NSString = NSStringFromClass(to.classForCoder()) as NSString
         let vc : BaseViewController = storyboard.instantiateViewController(withIdentifier: nameController.components(separatedBy: ".").last!) as! BaseViewController
         if extras != nil {
@@ -71,7 +71,7 @@ class ViewControllerUtils {
         from.navigationController?.pushViewController(vc, animated: true)
     }
     
-    class func presentViewControllerWithNavigation(from: UIViewController, to: BaseViewController.Type, extras: [String : AnyObject]? = nil){
+    public class func presentViewControllerWithNavigation(from: UIViewController, to: BaseViewController.Type, extras: [String : AnyObject]? = nil){
         let nameController : NSString = NSStringFromClass(to.classForCoder()) as NSString
         let vc : BaseViewController = storyboard.instantiateViewController(withIdentifier: nameController.components(separatedBy: ".").last!) as! BaseViewController
         if extras != nil {
@@ -82,7 +82,7 @@ class ViewControllerUtils {
         from.present(navigation, animated: true, completion: nil)
     }
     
-    class func presentViewControllerWithNavigationForResult(from: UIViewController, to: BaseViewController.Type, request: String, extras: [String : AnyObject]? = nil){
+    public class func presentViewControllerWithNavigationForResult(from: UIViewController, to: BaseViewController.Type, request: String, extras: [String : AnyObject]? = nil){
         let nameController : NSString = NSStringFromClass(to.classForCoder()) as NSString
         let vc : BaseViewController = storyboard.instantiateViewController(withIdentifier: nameController.components(separatedBy: ".").last!) as! BaseViewController
         if extras != nil {
@@ -94,7 +94,7 @@ class ViewControllerUtils {
         from.present(navigation, animated: true, completion: nil)
     }
     
-    class func popUpViewController(from: UIViewController, to: UIViewController.Type, extras: [String : AnyObject]? = nil){
+    public class func popUpViewController(from: UIViewController, to: UIViewController.Type, extras: [String : AnyObject]? = nil){
         let nameController : NSString = NSStringFromClass(to.classForCoder()) as NSString
         let vc: PopUpViewController = storyboard.instantiateViewController(withIdentifier: nameController.components(separatedBy: ".").last!) as! PopUpViewController
         vc.modalPresentationStyle = .overCurrentContext
@@ -106,7 +106,7 @@ class ViewControllerUtils {
     }
     
 
-    class func popUpViewControllerForResult(from: UIViewController, to: UIViewController.Type, request: String, extras: [String : AnyObject]? = nil){
+    public class func popUpViewControllerForResult(from: UIViewController, to: UIViewController.Type, request: String, extras: [String : AnyObject]? = nil){
         let nameController : NSString = NSStringFromClass(to.classForCoder()) as NSString
         let vc: PopUpViewController = storyboard.instantiateViewController(withIdentifier: nameController.components(separatedBy: ".").last!) as! PopUpViewController
         vc.modalPresentationStyle = .overCurrentContext
@@ -119,11 +119,11 @@ class ViewControllerUtils {
         from.present(vc, animated: true, completion: nil)
     }
     
-    class func popViewController(viewController: BaseViewController){
+    public class func popViewController(viewController: BaseViewController){
         viewController.navigationController?.popViewController(animated: true)
     }
     
-    class func popToRootViewController(viewController: BaseViewController){
+    public class func popToRootViewController(viewController: BaseViewController){
         viewController.navigationController?.popToRootViewController(animated: true)
     }
     

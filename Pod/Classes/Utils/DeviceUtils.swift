@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeviceUtils: NSObject {
+public class DeviceUtils: NSObject {
 
     class func devideID() -> String{
         return UIDevice.current.identifierForVendor!.uuidString

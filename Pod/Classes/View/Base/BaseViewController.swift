@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController, UITextFieldDelegate {
+public class BaseViewController: UIViewController, UITextFieldDelegate {
 
     var mPresenter : BasePresenter?
     var mPresenters : [BasePresenter]! = []
