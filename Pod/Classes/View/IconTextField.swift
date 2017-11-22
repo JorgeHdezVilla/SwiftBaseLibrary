@@ -14,9 +14,9 @@ import ActionSheetPicker_3_0
 //    @IBInspectable var iconLeft : UIImage? = nil
     @IBInspectable var maxCharacters : Int = 50
     
-    var elements : [String]? = nil
-    var indexElementPicker : Int = 0
-    var isEnablePicker : Bool = true
+    public var elements : [String]? = nil
+    public var indexElementPicker : Int = 0
+    public var isEnablePicker : Bool = true
     
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -53,17 +53,17 @@ import ActionSheetPicker_3_0
     }
     
     
-    func setDatePicker(){
+    public func setDatePicker(){
         self.removeTarget(self, action: nil, for: UIControlEvents.allEvents)
         self.addTarget(self, action:#selector(tapDateBlurButton(_:)), for: UIControlEvents.editingDidBegin)
     }
     
-    func setCreditCardDatePicker(){
+    public func setCreditCardDatePicker(){
         self.removeTarget(self, action: nil, for: UIControlEvents.allEvents)
         self.addTarget(self, action:#selector(tapCreditCardDateBlurButton(_:)), for: UIControlEvents.editingDidBegin)
     }
     
-    func setTextPicker(elements : [String]){
+    public func setTextPicker(elements : [String]){
         if self.elements == nil{
             self.removeTarget(self, action: nil, for: UIControlEvents.allEvents)
             self.addTarget(self, action:#selector(tapBlurButton(_:)), for: UIControlEvents.editingDidBegin)
@@ -84,7 +84,7 @@ import ActionSheetPicker_3_0
         showActionCreditCardDatePicker(date: self.text)
     }
     
-    func showActionDatePicker(date : String? = nil){
+    public func showActionDatePicker(date : String? = nil){
         var showDate : Date? = nil
         if date != nil && date != "" {
             showDate = DateUtils.toDate(date: date!)
@@ -113,7 +113,7 @@ import ActionSheetPicker_3_0
         datePicker?.show()
     }
     
-    func showActionCreditCardDatePicker(date : String? = nil){
+    public func showActionCreditCardDatePicker(date : String? = nil){
         var showDate : Date? = nil
         if date != nil && date != "" {
             showDate = DateUtils.toDate(date: date!)
@@ -142,7 +142,7 @@ import ActionSheetPicker_3_0
         datePicker?.show()
     }
     
-    func showActionPicker(){
+    public func showActionPicker(){
         if isEnablePicker {
             self.resignFirstResponder()
             ActionSheetStringPicker.show(withTitle: self.placeholder, rows: elements, initialSelection: 0, doneBlock: {

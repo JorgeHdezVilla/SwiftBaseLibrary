@@ -11,7 +11,7 @@ import UIKit
 open class BaseTableViewCell: UITableViewCell {
     
     var delegate : NSObjectProtocol!
-    var itemObject : NSObject?
+    public var itemObject : NSObject?
     var delegateCell: BaseTableDelegate?
     
     override open func awakeFromNib() {

@@ -10,12 +10,12 @@ import UIKit
 
 open class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, BaseTableDelegate {
     
-    var items : [T] = []
-    var itemSelected : T?
-    var tableView : UITableView?
-    var identifier : String?
-    var executeAction : Bool = false
-    var delegate : TableViewCellClickDelegate?
+    public var items : [T] = []
+    public var itemSelected : T?
+    public var tableView : UITableView?
+    public var identifier : String?
+    public var executeAction : Bool = false
+    public var delegate : TableViewCellClickDelegate?
     
     public init(tableView: UITableView) {
         super.init()
