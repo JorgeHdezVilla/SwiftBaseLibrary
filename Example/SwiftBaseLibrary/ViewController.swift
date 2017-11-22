@@ -10,7 +10,11 @@ import UIKit
 import ObjectMapper
 import SwiftBaseLibrary
 
-class ViewController: BaseViewController {
+class ViewController: BaseViewController, TableViewCellClickDelegate {
+    func onTableViewCellClick(item: NSObject, cell: UITableViewCell) {
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,8 @@ class ViewController: BaseViewController {
                                      TextFieldValidator(textField: mLastNameTextField, regex: RegexEnum.NOT_EMPTY),
                                      TextFieldValidator(textField: mLastNameTextField, regex: RegexEnum.NOT_EMPTY)
         )
+        let resulTableView : UITableView! = UITableView()
+        BaseDataSource(tableView: resulTableView, delegate: self)
 
     }
     

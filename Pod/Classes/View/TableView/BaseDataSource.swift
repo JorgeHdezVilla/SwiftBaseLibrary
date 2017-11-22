@@ -17,14 +17,14 @@ open class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITableV
     var executeAction : Bool = false
     var delegate : TableViewCellClickDelegate?
     
-    init(tableView: UITableView) {
+    public init(tableView: UITableView) {
         super.init()
         self.tableView = tableView
         self.delegate = nil
         settings()
     }
     
-    init(tableView: UITableView, delegate : TableViewCellClickDelegate) {
+    public init(tableView: UITableView, delegate : TableViewCellClickDelegate) {
         super.init()
         self.tableView = tableView
         self.delegate = delegate
