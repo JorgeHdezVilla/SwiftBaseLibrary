@@ -24,7 +24,7 @@ class PackagesTypePresenter: BaseEstrategiaPresenter {
     }
     
     func loadHomePackages(){
-    
+        
     }
     
     func loadBusinessPackages(){

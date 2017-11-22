@@ -27,4 +27,4 @@ extension Dictionary {
 }
 
 
-protocol APIKeys {}
+public protocol APIKeys {}

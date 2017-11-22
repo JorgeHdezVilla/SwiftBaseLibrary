@@ -31,7 +31,7 @@ open class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITableV
         settings()
     }
     
-    func settings(){
+    public func settings(){
         self.identifier = "\(self.genericName())"
         self.tableView?.dataSource = self
         self.tableView?.delegate = self
@@ -39,19 +39,19 @@ open class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITableV
         self.tableView?.rowHeight = UITableViewAutomaticDimension
     }
   
-    func update(items: [T]) {
+    public func update(items: [T]) {
         self.items = items
         self.tableView?.reloadData()
         self.executeAction = false
     }
     
-    func setHeightContent(){
+    public func setHeightContent(){
         self.tableView?.isScrollEnabled = false
         _ = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(self.updateHeight), userInfo: nil, repeats: false)
         _ = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(self.updateHeight), userInfo: nil, repeats: false)
     }
     
-    @objc func updateHeight() {
+    @objc public func updateHeight() {
         for constraint in (tableView?.constraints)! {
             if (constraint.firstAttribute == NSLayoutAttribute.height && constraint.secondAttribute == NSLayoutAttribute.notAnAttribute) {
                 constraint.constant = (tableView?.contentSize.height)!
@@ -60,7 +60,7 @@ open class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITableV
         self.tableView?.superview?.layoutIfNeeded()
     }
 
-    func update(items: [T], action : Bool) {
+    public func update(items: [T], action : Bool) {
         self.items = items
         self.tableView?.reloadData()
         self.executeAction = action
@@ -99,11 +99,11 @@ open class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITableV
         return cell!
     }
     
-    func getItemTypeCell(item : NSObject) -> BaseTableViewCell? {
+    public func getItemTypeCell(item : NSObject) -> BaseTableViewCell? {
         return nil
     }
     
-    func getCell<C: BaseTableViewCell>(cell : C.Type) -> BaseTableViewCell {
+    public func getCell<C: BaseTableViewCell>(cell : C.Type) -> BaseTableViewCell {
         let identifier = genericNameClass(cell : cell)
         return (tableView!.dequeueReusableCell(withIdentifier: identifier) as? BaseTableViewCell)!
     }
@@ -112,7 +112,7 @@ open class BaseDataSource<T: NSObject, C :BaseTableViewCell>: NSObject, UITableV
 
     }
     
-    func baseTableDelegate(sender: UITapGestureRecognizer){
+    public func baseTableDelegate(sender: UITapGestureRecognizer){
         if sender.state == UIGestureRecognizerState.ended {
             let tapLocation = sender.location(in: self.tableView)
             if let tapIndexPath = self.tableView?.indexPathForRow(at: tapLocation) {

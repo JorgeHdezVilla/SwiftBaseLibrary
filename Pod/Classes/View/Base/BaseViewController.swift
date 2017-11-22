@@ -10,13 +10,13 @@ import UIKit
 
 open class BaseViewController: UIViewController, UITextFieldDelegate {
 
-    var mPresenter : BasePresenter?
-    var mPresenters : [BasePresenter]! = []
-    var extras : [String: AnyObject] = [:]
-    var resultDelegate : ControllerResultDelegate?
-    var requestValue : String = ""
-    var resultValue : ViewControllerResult = ViewControllerResult.RESULT_ERROR
-    var data : [String : AnyObject] = [:]
+    public var mPresenter : BasePresenter?
+    public var mPresenters : [BasePresenter]! = []
+    public var extras : [String: AnyObject] = [:]
+    public var resultDelegate : ControllerResultDelegate?
+    public var requestValue : String = ""
+    public var resultValue : ViewControllerResult = ViewControllerResult.RESULT_ERROR
+    public var data : [String : AnyObject] = [:]
     
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -55,11 +55,11 @@ open class BaseViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func getPresenter() -> BasePresenter? {
+    public func getPresenter() -> BasePresenter? {
         return nil
     }
     
-    func getPresenters() -> [BasePresenter]? {
+    public func getPresenters() -> [BasePresenter]? {
         return []
     }
     
@@ -83,23 +83,23 @@ open class BaseViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func onViewControllerResult() {
+    public func onViewControllerResult() {
         
     }
     
-    func onViewControllerResult(params: [String : String]?) {
+    public func onViewControllerResult(params: [String : String]?) {
         
     }
     
-    func hasExtra(key: APIKeys) -> Bool{
+    public func hasExtra(key: APIKeys) -> Bool{
         return self.extras[key] != nil
     }
     
-    @objc func hideKeyboard() {
+    @objc public  func hideKeyboard() {
         view.endEditing(true)
     }
     
-    func resignFirstResponser(textFields : UITextField...){
+    public func resignFirstResponser(textFields : UITextField...){
         for textField in textFields{
             textField.resignFirstResponder()
         }

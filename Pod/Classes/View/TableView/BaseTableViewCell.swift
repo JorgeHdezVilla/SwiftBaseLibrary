@@ -24,24 +24,24 @@ open class BaseTableViewCell: UITableViewCell {
         delegateCell?.baseTableDelegate(sender: sender)
     }
     
-    func pupulate(object :NSObject) {
+    open func pupulate(object :NSObject) {
         preconditionFailure("This method must be overridden")
     }
     
-    func pupulateSelected(object :NSObject) {
+    open func pupulateSelected(object :NSObject) {
         
     }
     
-    func executeAction() {
+    open func executeAction() {
         preconditionFailure("This method must be overridden")
     }
     
-    func toString() -> String{
+    open func toString() -> String{
         preconditionFailure("This method must be overridden")
     }
     
 }
 
-protocol BaseTableDelegate {
+public protocol BaseTableDelegate {
     func baseTableDelegate(sender: UITapGestureRecognizer)
 }

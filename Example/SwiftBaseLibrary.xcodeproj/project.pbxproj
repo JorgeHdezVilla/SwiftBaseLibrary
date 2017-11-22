@@ -16,6 +16,7 @@
 		70F5FB88580F3F0DC40595DB /* Pods_SwiftBaseLibrary_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19BA61011CD9C9475D760CE /* Pods_SwiftBaseLibrary_Tests.framework */; };
 		8F3B9E161FC551A300A83690 /* BaseEstrategiaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B9E151FC551A200A83690 /* BaseEstrategiaPresenter.swift */; };
 		8FD5F7021FC553CF00804326 /* PackagesTypePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD5F7011FC553CE00804326 /* PackagesTypePresenter.swift */; };
+		8FD5F7041FC5586200804326 /* PackageTripleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD5F7031FC5586200804326 /* PackageTripleCell.swift */; };
 		D60DC8E9DB49A3BA36E50EFE /* Pods_SwiftBaseLibrary_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64550DF926F0DA1CF0227A9D /* Pods_SwiftBaseLibrary_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		7F82AC7F12BDA0A045FBC1D1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8F3B9E151FC551A200A83690 /* BaseEstrategiaPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEstrategiaPresenter.swift; sourceTree = "<group>"; };
 		8FD5F7011FC553CE00804326 /* PackagesTypePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackagesTypePresenter.swift; sourceTree = "<group>"; };
+		8FD5F7031FC5586200804326 /* PackageTripleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageTripleCell.swift; sourceTree = "<group>"; };
 		A689B5CE9FDD8F2884AE61A5 /* SwiftBaseLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftBaseLibrary.podspec; path = ../SwiftBaseLibrary.podspec; sourceTree = "<group>"; };
 		B19BA61011CD9C9475D760CE /* Pods_SwiftBaseLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBaseLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0779DECC35C40B5F2114ECF /* Pods-SwiftBaseLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBaseLibrary_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftBaseLibrary_Example/Pods-SwiftBaseLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				8FD5F7031FC5586200804326 /* PackageTripleCell.swift */,
 				8FD5F7011FC553CE00804326 /* PackagesTypePresenter.swift */,
 				8F3B9E151FC551A200A83690 /* BaseEstrategiaPresenter.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -392,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F3B9E161FC551A300A83690 /* BaseEstrategiaPresenter.swift in Sources */,
+				8FD5F7041FC5586200804326 /* PackageTripleCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				8FD5F7021FC553CF00804326 /* PackagesTypePresenter.swift in Sources */,
