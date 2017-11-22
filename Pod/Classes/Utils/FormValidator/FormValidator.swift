@@ -20,13 +20,13 @@ open class FormValidator: NSObject {
         self.showAnimationError = showAnimationError
     }
     
-    func addValidators(validators : Validator...){
+    public func addValidators(validators : Validator...){
         for validator in validators{
             self.validators?.add(validator)
         }
     }
     
-    func isValid() -> Bool{
+    public func isValid() -> Bool{
         var valid : Bool = true
         //showAllErrors = false
         if showAllErrors! {

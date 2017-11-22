@@ -17,22 +17,22 @@ let CUSTOM_HEADERS = [
     "Accept" : "application/json"
 ]
 
-public class BaseRetrofitManager<Res : BaseResponse>: NSObject {
+open class BaseRetrofitManager<Res : BaseResponse>: NSObject {
     
     var requestUrl : String
     var delegate : AlamofireResponseDelegate
     var request : Alamofire.Request?
     
-    init(requestUrl: String, delegate : AlamofireResponseDelegate){
+    public init(requestUrl: String, delegate : AlamofireResponseDelegate){
         self.delegate = delegate
         self.requestUrl = requestUrl
     }
     
-    func getJsonDebug(requestUrl : String) -> String {
+    open func getJsonDebug(requestUrl : String) -> String {
         return ""
     }
     
-    func getDebugEnabled() -> Bool {
+    open func getDebugEnabled() -> Bool {
         return false
     }
     
@@ -54,7 +54,7 @@ public class BaseRetrofitManager<Res : BaseResponse>: NSObject {
         return manager
     }()
     
-    func request(requestModel : BaseRequest) {
+    public func request(requestModel : BaseRequest) {
         if getDebugEnabled() {
             let json : String = getJsonDebug(requestUrl : self.requestUrl)
             if json != ""{
@@ -82,7 +82,7 @@ public class BaseRetrofitManager<Res : BaseResponse>: NSObject {
         }
     }
     
-    func requestRealm(requestModel : BaseRealmRequest) {
+    public func requestRealm(requestModel : BaseRealmRequest) {
         if getDebugEnabled() {
             let json : String = getJsonDebug(requestUrl : self.requestUrl)
             if json != ""{

@@ -16,6 +16,10 @@ class ViewController: BaseViewController {
         
         var mLastNameTextField : UITextView = UITextView()
         mLastNameTextField.text?.trim()
+        
+        
+        var mFormValidator : FormValidator!
+        mFormValidator.isValid()
     }
 
 }

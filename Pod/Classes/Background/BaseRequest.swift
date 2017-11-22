@@ -9,13 +9,13 @@
 import UIKit
 import ObjectMapper
 
-public class BaseRequest: NSObject, Mappable {
+open class BaseRequest: NSObject, Mappable {
     
     required convenience public init?(map: Map) {
         self.init()
     }
     
-    public func mapping(map : Map){
+    open func mapping(map : Map){
         
     }
     
