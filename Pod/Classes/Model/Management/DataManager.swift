@@ -77,11 +77,11 @@ public class DataManager : NSObject {
         
         var mRealm : Realm!
         
-        init(mRealm : Realm) {
+        public init(mRealm : Realm) {
             self.mRealm = mRealm
         }
         
-        func save<T: Object>(object: T){
+        public func save<T: Object>(object: T){
             mRealm.add(object, update: true)
         }
     }

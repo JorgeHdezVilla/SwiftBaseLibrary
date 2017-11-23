@@ -21,6 +21,10 @@ class ViewController: BaseViewController, TableViewCellClickDelegate {
         
         var mDataManager : DataManager = DataManager().getInstance()
         
+//        mDataManager.tx(execute: { (tx) -> Void in
+//            tx.save(object: <#T##T#>)
+//        })
+        
         var mLastNameTextField : UITextField = UITextField()
         mLastNameTextField.text?.trim()
         
