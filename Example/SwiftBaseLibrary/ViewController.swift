@@ -19,6 +19,8 @@ class ViewController: BaseViewController, TableViewCellClickDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var mDataManager : DataManager = DataManager().getInstance()
+        
         var mLastNameTextField : UITextField = UITextField()
         mLastNameTextField.text?.trim()
         
