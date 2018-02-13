@@ -1,10 +1,4 @@
-//
-//  IconTextField.swift
-//  VentasTotalPlayiOS
-//
-//  Created by Daniel García Aldynamic varado on 12/16/16.
-//  Copyright © 2016 TotalPlay. All rights reserved.
-//
+
 
 import UIKit
 import ActionSheetPicker_3_0

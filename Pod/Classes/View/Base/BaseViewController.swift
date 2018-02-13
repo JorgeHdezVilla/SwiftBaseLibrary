@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Ventas TotalPlay
-//
-//  Created by Mario Hernandez on 01/11/16.
-//  Copyright © 2016 TotalPlay. All rights reserved.
-//
 
 import UIKit
 

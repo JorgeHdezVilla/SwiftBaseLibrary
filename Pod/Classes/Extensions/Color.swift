@@ -1,10 +1,4 @@
-//
-//  Color.swift
-//  EstrategiaDigital
-//
-//  Created by Jorge Hdez VIlla on 21/11/17.
-//  Copyright © 2017 Charls Salazar. All rights reserved.
-//
+
 
 import UIKit
 

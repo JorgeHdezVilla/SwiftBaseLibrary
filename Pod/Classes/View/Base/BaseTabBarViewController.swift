@@ -1,10 +1,3 @@
-//
-//  BaseTabBarViewController.swift
-//  Ventas TotalPlay
-//
-//  Created by Daniel García Aldynamic varado on 07/11/16.
-//  Copyright © 2016 TotalPlay. All rights reserved.
-//
 
 import UIKit
 

@@ -1,10 +1,4 @@
-//
-//  CheckBoxButton.swift
-//  VentasTotalPlayiOS
-//
-//  Created by Daniel García Aldynamic varado on 12/2/16.
-//  Copyright © 2016 TotalPlay. All rights reserved.
-//
+
 
 import UIKit
 

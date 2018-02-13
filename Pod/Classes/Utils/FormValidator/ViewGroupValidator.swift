@@ -1,10 +1,4 @@
-//
-//  ViewGroupValidator.swift
-//  VentasTotalPlayiOS
-//
-//  Created by Jorge Hdez Villa on 13/02/17.
-//  Copyright © 2017 TotalPlay. All rights reserved.
-//
+
 
 import UIKit
 

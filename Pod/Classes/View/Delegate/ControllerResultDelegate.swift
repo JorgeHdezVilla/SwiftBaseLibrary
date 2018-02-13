@@ -1,10 +1,4 @@
-//
-//  PopUpDelegate.swift
-//  ImageTest
-//
-//  Created by Jorge Hdez Villa on 01/02/17.
-//  Copyright © 2017 Jorge Hdez Villa. All rights reserved.
-//
+
 
 import UIKit
 

@@ -1,10 +1,4 @@
-//
-//  UIImage.swift
-//  EstrategiaDigital
-//
-//  Created by Jorge Hdez VIlla on 23/10/17.
-//  Copyright © 2017 Charls Salazar. All rights reserved.
-//
+
 
 import UIKit
 

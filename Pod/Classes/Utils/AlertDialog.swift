@@ -1,10 +1,4 @@
-//
-//  AlertDialog.swift
-//  EstrategiaDigital
-//
-//  Created by Charls Salazar on 27/06/17.
-//  Copyright © 2017 Charls Salazar. All rights reserved.
-//
+
 
 import UIKit
 import PKHUD

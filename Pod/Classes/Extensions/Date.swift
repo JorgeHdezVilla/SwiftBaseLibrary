@@ -1,10 +1,3 @@
-//
-//  DateExtensions.swift
-//  VentasTotalPlayiOS
-//
-//  Created by Jorge Hdez Villa on 03/03/17.
-//  Copyright © 2017 TotalPlay. All rights reserved.
-//
 
 import UIKit
 

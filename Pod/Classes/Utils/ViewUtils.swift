@@ -1,10 +1,4 @@
-//
-//  ViewUtils.swift
-//  Ventas TotalPlay
-//
-//  Created by Daniel García Alvarado on 07/11/16.
-//  Copyright © 2016 TotalPlay. All rights reserved.
-//
+
 
 import UIKit
 

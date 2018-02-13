@@ -1,10 +1,4 @@
-//
-//  RecoveryPasswordPresenter.swift
-//  EstrategiaDigital
-//
-//  Created by Jorge Hdez VIlla on 07/09/17.
-//  Copyright © 2017 Charls Salazar. All rights reserved.
-//
+
 
 import UIKit
 import SwiftBaseLibrary

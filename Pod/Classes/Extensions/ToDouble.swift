@@ -1,10 +1,4 @@
-//
-//  ToDouble.swift
-//  EstrategiaDigital
-//
-//  Created by Charls Salazar on 03/11/17.
-//  Copyright © 2017 Charls Salazar. All rights reserved.
-//
+
 
 extension String {
     public func toDouble() -> Double? {
